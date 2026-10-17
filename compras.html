@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./compras.css">
+    <title>Realizar Pedido - Jardín de Lulú</title>
+</head>
+
+<body>
+    <div class="Principal">
+       <div class="barra_ini">
+            <div class="nav">
+                <h1>Jardín de Lulú</h1>
+                <div>
+                    <img src="./fotos/Logo.png" alt="Logo Jardín de Lulú" onclick="location.href='index.html'" style="cursor: pointer;">
+                </div>
+            </div>
+            <div class="nav1">
+                <div class="nav2">
+                    <button onclick="location.href='catalogo.html'">Catálogo</button>
+                </div>
+                <div class="nav2">
+                    <button onclick="location.href='index.html'">Colecciones</button>
+                </div>
+                <div class="nav2">
+                    <button>Nuestro Taller</button>
+                </div>
+                <div class="nav2">
+                    <button onclick="location.href='cuidadof.html'">Cuidado de Flores</button>
+                </div>
+                <div class="nav2">
+                    <button>Eventos</button>
+                </div>
+                <div class="nav2">
+                    <button>Testimonios</button>
+                </div>
+            </div>
+            <div class="iconos_ini">
+                <button title="Carrito">🛒</button>
+                <button title="Buscar">🔍</button>
+                <button title="Menú">☰</button>
+            </div>
+        </div>
+        <section class="seccion-pedido">
+            
+            <div class="pedido-encabezado">
+                <h2>DETALLES DE TU PEDIDO FLORAL</h2>
+                <p>Dinos a quién deseas sorprender y nos encargaremos de cada detalle con la máxima delicadeza.</p>
+            </div>
+
+            <div class="pedido-contenedor-grid">
+                
+                <!-- COLUMNA IZQUIERDA: FORMULARIO DE COMPRA -->
+                <div class="tarjeta-formulario">
+                    <h3>FORMULARIO DE PEDIDO</h3>
+                    <form class="formulario-pedido">
+                        
+                        <!-- 1. Tipo de Arreglo y Ocasión -->
+                        <div class="fila-formulario">
+                            <div class="campo-grupo">
+                                <label for="tipo-arreglo">Tipo de Arreglo *</label>
+                                <select id="tipo-arreglo" required>
+                                    <option value="" disabled selected>Selecciona tu arreglo...</option>
+                                    <option value="mini">Suscripción Mini / Ramo Pequeño ($80.000)</option>
+                                    <option value="clasico">Suscripción Clásico / Arreglo Mediano ($150.000)</option>
+                                    <option value="empresarial">Plan Empresarial / Corporativo ($280.000)</option>
+                                    <option value="ramo-boutique">Ramo Boutique Personalizado</option>
+                                    <option value="caja-rosas">Caja de Rosas & Peonías Premium</option>
+                                </select>
+                            </div>
+
+                            <div class="campo-grupo">
+                                <label for="ocasion">Ocasión *</label>
+                                <select id="ocasion" required>
+                                    <option value="" disabled selected>¿Qué celebran?...</option>
+                                    <option value="cumpleanos">Cumpleaños</option>
+                                    <option value="aniversario">Aniversario / Romance</option>
+                                    <option value="agradecimiento">Agradecimiento</option>
+                                    <option value="condolencias">Condolencias / Respeto</option>
+                                    <option value="porque-si">Porque sí / Detalle espontáneo</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- 2. Fecha y Hora de Entrega -->
+                        <div class="fila-formulario">
+                            <div class="campo-grupo">
+                                <label for="fecha-entrega">Fecha de Entrega *</label>
+                                <input type="date" id="fecha-entrega" required>
+                            </div>
+
+                            <div class="campo-grupo">
+                                <label for="hora-entrega">Horario Preferido *</label>
+                                <select id="hora-entrega" required>
+                                    <option value="" disabled selected>Franja horaria...</option>
+                                    <option value="manana">Mañana (8:00 AM - 12:00 PM)</option>
+                                    <option value="tarde">Tarde (2:00 PM - 6:00 PM)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- 3. Mensaje para Tarjeta -->
+                        <div class="campo-grupo ancho-completo">
+                            <label for="mensaje-tarjeta">Mensaje para la Tarjeta (Gratis)</label>
+                            <textarea id="mensaje-tarjeta" rows="3" placeholder="Escribe aquí las palabras que irán caligrafiadas en la tarjeta de obsequio..."></textarea>
+                        </div>
+
+                        <!-- 4. Dirección de Entrega -->
+                        <div class="campo-grupo ancho-completo">
+                            <label for="direccion">Dirección Completa de Entrega *</label>
+                            <input type="text" id="direccion" placeholder="Ej: Calle 10 # 12-34, Barrio El Centro / Conjunto, Apt" required>
+                        </div>
+
+                        <!-- 5. Datos de Contacto -->
+                        <div class="fila-formulario">
+                            <div class="campo-grupo">
+                                <label for="nombre-comprador">Tu Nombre Completo *</label>
+                                <input type="text" id="nombre-comprador" placeholder="Nombre de quien envía" required>
+                            </div>
+
+                            <div class="campo-grupo">
+                                <label for="telefono-comprador">Teléfono / WhatsApp *</label>
+                                <input type="tel" id="telefono-comprador" placeholder="+57 300 000 0000" required>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-confirmar-pedido">CONFIRMAR Y FINALIZAR PEDIDO</button>
+                    </form>
+                </div>
+
+                <!-- COLUMNA DERECHA: INFORMACIÓN DE ENVÍOS -->
+                <div class="tarjeta-envios-info">
+                    <h3>INFORMACIÓN DE ENVÍOS</h3>
+                    <p class="envios-intro">Garantizamos el transporte hidropónico y refrigerado para que tus flores lleguen tan frescas como si acabaran de ser cortadas.</p>
+
+                    <div class="bloque-zona-envio">
+                        <h4>📍 COBERTURA Y TARIFAS</h4>
+                        
+                        <div class="item-cobertura">
+                            <div class="zona-titulo">
+                                <span>San Gil (Zona Urbana)</span>
+                                <strong>$8.000 / Gratis en Suscripciones</strong>
+                            </div>
+                            <p>Entregas en el mismo día para pedidos realizados antes de las 2:00 PM.</p>
+                        </div>
+
+                        <div class="item-cobertura">
+                            <div class="zona-titulo">
+                                <span>Bucaramanga & Área Metropolitana</span>
+                                <strong>$25.000</strong>
+                            </div>
+                            <p>Incluye Bucaramanga, Floridablanca, Girón y Piedecuesta. Entregas programadas con 24 horas de anticipación.</p>
+                        </div>
+
+                        <div class="item-cobertura">
+                            <div class="zona-titulo">
+                                <span>Municipios Cercanos (Barichara, Socorro)</span>
+                                <strong>$18.000</strong>
+                            </div>
+                            <p>Despachos diarios en ruta especial de la mañana.</p>
+                        </div>
+                    </div>
+
+                    <div class="bloque-politicas-envio">
+                        <h4>⏱️ TIEMPOS Y GARANTÍA</h4>
+                        <ul>
+                            <li>🌸 <strong>Garantía de Frescura:</strong> Si tus flores sufren algún daño durante el transporte, las reemplazamos sin costo adicional.</li>
+                            <li>🚚 <strong>Notificación en Tiempo Real:</strong> Te enviaremos una foto del arreglo final por WhatsApp antes de salir a ruta.</li>
+                            <li>✉️ <strong>Privacidad:</strong> Los datos del remitente solo se incluirán en la tarjeta si tú lo especificas.</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+        <a href="https://wa.me/573000000000?text=Hola,%20tengo%20una%20consulta%20sobre%20mi%20pedido%20o%20env%C3%ADos"
+            class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzkuDbOmJTcuTj_dpoEPZ3wk7BZ9VzXKxV-JkjtyjNug&s=10" alt="Chat de WhatsApp">
+        </a>
+
+        <!-- PIE DE PÁGINA (FOOTER) -->
+        <footer class="pie-pagina">
+            <div class="pie-contenedor">
+                
+                <!-- COLUMNA 1: MARCA -->
+                <div class="columna-pie marca">
+                    <h3>Jardín de Lulú</h3>
+                    <p class="eslogan-pie">Diseño floral exclusivo, refinado y consciente en San Gil, Santander.</p>
+                    <div class="redes-sociales">
+                        <a href="https://instagram.com" target="_blank" class="icono-red" title="Instagram">Instagram</a>
+                        <a href="https://facebook.com" target="_blank" class="icono-red" title="Facebook">Facebook</a>
+                        <a href="https://wa.me/573000000000" target="_blank" class="icono-red" title="WhatsApp">WhatsApp</a>
+                    </div>
+                </div>
+
+                <!-- COLUMNA 2: EXPLORAR -->
+                <div class="columna-pie">
+                    <h4>EXPLORAR</h4>
+                    <ul>
+                        <li><a href="#catalogo">Catálogo</a></li>
+                        <li><a href="#colecciones">Colecciones</a></li>
+                        <li><a href="#taller">Nuestro Taller</a></li>
+                        <li><a href="#cuidado">Cuidado de Flores</a></li>
+                        <li><a href="#suscripciones">Suscripciones</a></li>
+                    </ul>
+                </div>
+
+                <!-- COLUMNA 3: ATENCIÓN -->
+                <div class="columna-pie">
+                    <h4>ATENCIÓN</h4>
+                    <p>📍 San Gil, Santander</p>
+                    <p>🕒 Lun - Sáb: 8:00 AM - 7:00 PM</p>
+                    <p>📞 +57 (300) 123-4567</p>
+                    <p>✉️ hola@jardindelulu.com</p>
+                </div>
+
+                <!-- COLUMNA 4: BOLETÍN -->
+                <div class="columna-pie boletin">
+                    <h4>UNIRSE AL CLUB FLORAL</h4>
+                    <p>Recibe noticias de nuevas colecciones de temporada e invitaciones exclusivas.</p>
+                    <div class="caja-suscripcion">
+                        <input type="email" placeholder="Tu correo electrónico...">
+                        <button type="button">UNIRME</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pie-derechos">
+                <p>© 2026 Jardín de Lulú. Todos los derechos reservados. San Gil, Colombia.</p>
+            </div>
+        </footer>
+
+    </div> 
+</body>
+
+</html>

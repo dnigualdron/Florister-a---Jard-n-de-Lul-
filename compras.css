@@ -1,0 +1,652 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(247, 239, 244, 0.75); /* Crema lino/rosa tenue exclusivo */
+    color: #2A2827;                              /* Espresso muy suave */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.Principal {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.barra_ini {
+    padding: 22px 50px;
+    display: grid;
+    grid-template-columns: 25% 65% 10%;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(247, 239, 244, 0.75); /* Fondo translúcido elegante */
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #E6E1D7;
+}
+
+.barra_ini h1 {
+    margin-top: 0;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 24px;
+    color: #2A2827;
+}
+
+.barra_ini img {
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #E6E1D7;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav1 {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.barra_ini button {
+    border: none;
+    border-radius: 20px;
+    background: transparent;
+    cursor: pointer;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #55504C;
+    transition: all 0.3s ease;
+}
+
+.nav2 button {
+    padding: 10px 18px;
+}
+
+.nav2 button:hover,
+.nav2 button.activo {
+    background: #8C5363; /* Borgoña boutique */
+    color: #FFFFFF;
+}
+
+.iconos_ini {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+}
+
+.iconos_ini button {
+    padding: 8px 12px;
+    background: transparent;
+    color: #2A2827;
+    font-size: 15px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.iconos_ini button:hover {
+    background: #8C5363;
+    color: #FFFFFF;
+}
+
+.seccion-pedido {
+    padding: 70px 40px;
+    background-color: rgba(247, 242, 239, 0.75);
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pedido-encabezado {
+    text-align: center;
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+
+.pedido-encabezado h2 {
+    font-size: 28px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    color: #2A2827;
+    margin-bottom: 12px;
+}
+
+.pedido-encabezado p {
+    font-size: 14.5px;
+    color: #6E6863;
+    line-height: 1.6;
+}
+
+.pedido-contenedor-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 40px;
+    width: 100%;
+    max-width: 1150px;
+    align-items: start;
+    box-sizing: border-box;
+}
+
+/* Tarjeta Formulario */
+.tarjeta-formulario {
+    background-color: rgba(253, 251, 247, 0.95);
+    border: 1px solid #E8E3D8;
+    border-radius: 12px;
+    padding: 35px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
+}
+
+.tarjeta-formulario h3 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #2A2827;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #F0EBE1;
+}
+
+.formulario-pedido {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fila-formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+}
+
+.campo-grupo.ancho-completo {
+    grid-column: 1 / -1;
+}
+
+.campo-grupo label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #55504C;
+    text-transform: uppercase;
+}
+
+.campo-grupo input,
+.campo-grupo select,
+.campo-grupo textarea {
+    padding: 12px 14px;
+    border: 1px solid #E8E3D8;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    color: #2A2827;
+    font-size: 13.5px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.campo-grupo input:focus,
+.campo-grupo select:focus,
+.campo-grupo textarea:focus {
+    border-color: #8C5363;
+    box-shadow: 0 0 0 3px rgba(140, 83, 99, 0.1);
+}
+
+.btn-confirmar-pedido {
+    width: 100%;
+    padding: 14px 0;
+    background-color: #8C5363;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 25px;
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-confirmar-pedido:hover {
+    background-color: #6E3F4E;
+    transform: translateY(-2px);
+}
+
+/* Tarjeta Información de Envíos */
+.tarjeta-envios-info {
+    background-color: #4D584C; /* Verde bosque elegante */
+    color: #F7F2EF;
+    border-radius: 12px;
+    padding: 35px;
+    box-shadow: 0 8px 24px rgba(77, 88, 76, 0.15);
+    text-align: left;
+}
+
+.tarjeta-envios-info h3 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+}
+
+.envios-intro {
+    font-size: 13px;
+    color: #D3CDC6;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.bloque-zona-envio h4,
+.bloque-politicas-envio h4 {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #E6E1D7;
+    margin-bottom: 15px;
+}
+
+.item-cobertura {
+    margin-bottom: 18px;
+}
+
+.zona-titulo {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.zona-titulo span {
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.zona-titulo strong {
+    color: #E6E1D7;
+    font-size: 12px;
+}
+
+.item-cobertura p {
+    font-size: 12px;
+    color: #D3CDC6;
+    line-height: 1.4;
+}
+
+.bloque-politicas-envio {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.bloque-politicas-envio ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.bloque-politicas-envio li {
+    font-size: 12.5px;
+    color: #D3CDC6;
+    line-height: 1.5;
+}
+
+.bloque-politicas-envio strong {
+    color: #FFFFFF;
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.whatsapp-float img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+.pie-pagina {
+    background-color: #4D584C;
+    color: #F7F2EF;
+    padding: 60px 40px 20px 40px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.pie-contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr 1fr 1.2fr;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(247, 242, 239, 0.15);
+}
+
+.columna-pie h3 {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+}
+
+.columna-pie h4 {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #E6E1D7;
+    margin-bottom: 20px;
+}
+
+.eslogan-pie {
+    font-size: 13px;
+    color: #D3CDC6;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.columna-pie p {
+    font-size: 13px;
+    color: #D3CDC6;
+    line-height: 1.8;
+    margin-bottom: 8px;
+}
+
+.columna-pie ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.columna-pie ul li {
+    margin-bottom: 10px;
+}
+
+.columna-pie ul li a {
+    color: #D3CDC6;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.3s ease;
+}
+
+.columna-pie ul li a:hover {
+    color: #FFFFFF;
+}
+
+.redes-sociales {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.icono-red {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    color: #F7F2EF;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.icono-red:hover {
+    background-color: #8C5363;
+    border-color: #8C5363;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+.caja-suscripcion {
+    display: flex;
+    margin-top: 15px;
+}
+
+.caja-suscripcion input {
+    padding: 10px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px 0 0 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+    font-size: 12px;
+    outline: none;
+    width: 100%;
+}
+
+.caja-suscripcion input::placeholder {
+    color: #B5B0A8;
+}
+
+.caja-suscripcion button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    background-color: #8C5363;
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.caja-suscripcion button:hover {
+    background-color: #6E3F4E;
+}
+
+.pie-derechos {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.pie-derechos p {
+    font-size: 12px;
+    color: #B5B0A8;
+}
+@media (max-width: 1300px) {
+    .barra_ini {
+        padding: 15px 25px;
+        grid-template-columns: 22% 68% 10%; /* Ajuste fino de porcentajes para que quepa todo */
+    }
+
+    .barra_ini h1 {
+        font-size: 20px; /* Un toque más pequeño para dar espacio */
+    }
+
+    .barra_ini img {
+        width: 45px;
+        height: 45px;
+        margin-left: 10px;
+    }
+
+    .nav1 {
+        gap: 6px; /* Espacio más ajustado entre botones */
+    }
+
+    .nav2 button {
+        padding: 8px 10px;
+        font-size: 11.5px; /* Letra ligeramente más compacta */
+        letter-spacing: 0.5px;
+    }
+
+    .iconos_ini {
+        gap: 6px;
+    }
+
+    .iconos_ini button {
+        padding: 6px 8px;
+        font-size: 14px;
+    }
+
+    .father_content {
+        grid-template-columns: repeat(3, 320px);
+    }
+}
+
+/* 2. Tu media query favorito a partir de 1000px hacia abajo */
+@media (max-width: 1000px) {
+    .barra_ini {
+        padding: 15px 20px;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .nav {
+        justify-content: center;
+    }
+
+    .nav1 {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .iconos_ini {
+        justify-content: center;
+    }
+
+    .father_content {
+        grid-template-columns: repeat(2, 320px);
+    }
+
+    .ubi {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+
+    .contenido_4 {
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+        gap: 20px;
+    }
+
+    .pie-contenedor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 950px) {
+    .pedido-contenedor-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pie-contenedor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    /* 1. Ajustar el contenedor general de la sección para que no toque los bordes */
+    .seccion-compras, 
+    .formulario-container, 
+    .checkout-container {
+        padding: 30px 15px !important;
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    /* 2. Reducir ligeramente el tamaño del título principal en celular */
+    .seccion-compras h2, 
+    .checkout-titulo h2 {
+        font-size: 22px !important;
+        letter-spacing: 2px !important;
+        text-align: center;
+    }
+
+    .seccion-compras p, 
+    .checkout-subtitulo {
+        font-size: 13px !important;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    /* 3. Hacer que la tarjeta o caja del formulario ocupe todo el ancho disponible cómodamente */
+    .formulario-pedido, 
+    .tarjeta-checkout {
+        width: 100% !important;
+        padding: 20px 18px !important;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    
+    /* 4. Adaptar campos de texto, selectores y botones para el touch del celular */
+    input, select, textarea, .btn-enviar-pedido {
+        width: 100% !important;
+        font-size: 14px !important;
+        padding: 12px !important;
+        box-sizing: border-box;
+    }
+}
+@media (max-width: 600px) {
+    .fila-formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .barra_ini {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .pie-contenedor {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 480px) {
+    /* Ajustes extra para teléfonos muy angostos */
+    .formulario-pedido, 
+    .tarjeta-checkout {
+        padding: 15px 12px !important;
+    }
+}
