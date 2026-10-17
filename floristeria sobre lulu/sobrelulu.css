@@ -1,0 +1,62 @@
+
+.contenedor1{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.loguito{
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+}
+.logo1{
+    width: 120px; ;
+    height: auto;
+}
+.sobreyo{
+    display: flex;
+    padding: 60px 22px;
+    justify-content: center;
+
+}
+
+.contenedor2{
+    max-width: 900px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+.abuela{
+    flex: 1;
+}
+.lulu{
+    width: 100%;
+    border-radius: 10px;
+    border: 5px solid 
+}
+.texto{
+    flex: 1;
+}
+
+.tex{
+    color: darkgreen;
+    font-size: 25px;
+}
+.tex2{
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+.tex3{
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+.sueño{
+    background-color: hsl(298, 66%, 92%);
+    padding: 12px;
+    border-left: 5px solid;
+    border-radius: 0 5px 5px 0;
+    margin-top: 15px;
+    font-size: 16px;
+}

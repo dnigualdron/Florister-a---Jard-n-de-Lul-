@@ -1,0 +1,131 @@
+
+.body{
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor{
+    display: flex;
+    background-image: url("./img-quinces.jpg");
+    height: 100vh;
+    width: 100%;
+}
+.titulo{
+    position:absolute;
+    display: flex;
+    color:hsla(87, 57%, 33%, 0.888);
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top:5px;
+    font-weight: 600;
+    width: fit-content;
+    left: 50%;
+}
+.formu{
+    display: flex;
+    text-align:start;
+    color: #8f5e47;
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+.nombre{
+    display: flex;
+    font-weight: 520;
+    color:rgb(47, 107, 38);
+    margin: top 10px;
+    margin-bottom: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 17px;
+}
+.contactos{
+    display: flex;
+    font-weight: 520;
+    color:rgb(47, 107, 38);
+    margin: top 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 17px;
+}
+.documento{
+    display: flex;
+    font-weight: 520;
+    color:rgb(47, 107, 38);
+    margin: top 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 17px;
+}
+.correo{
+    display: flex;
+    font-weight: 520;
+    color:rgb(47, 107, 38);
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 17px;
+}
+.numero{
+    display: flex;
+    font-weight: 520;
+    color:rgb(47, 107, 38);
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 17px;
+}
+.casa{
+    display: flex;
+    font-weight: 520;
+    color:rgb(47, 107, 38);
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 17px;
+}
+.lugar{
+    display: flex;
+    font-weight: 520;
+    color:rgb(47, 107, 38);
+    margin: top 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 17px;
+}
+.surge{
+    display: flex;
+    font-weight: 520;
+    color:rgb(47, 107, 38);
+    margin: top 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 17px;
+}
+.años{
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 20px;
+    color: rgb(42, 30, 41);
+    font-weight: bold;
+}
+.servicios{
+    position:absolute;
+    bottom: 15px;
+    right: 5%;
+    background-color: beige;
+    padding: 25px;
+    border-radius: 12px;
+    width: 250px;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 4);
+
+}
